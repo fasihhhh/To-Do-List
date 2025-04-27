@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/output.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="wrapper min-h-screen bg-[#29769979] flex items-center justify-center dark:bg-[#153746bb] ">
+        <!-- Main starts , it contains the whole box of to do list -->
+        <main class="w-[90%] sm:max-w-[500px]  min-h-[320px] sm:min-h-[200px]  bg-slate-200  p-3 flex flex-col gap-1 rounded-[10px] max-h-[600px] border-3 border-amber-700 dark:bg-slate-800 dark:text-white">
+            <div class="top-heading w-full h-[70px] pt-3  flex-row flex sm:justify-center justify-center items-center bg-aber-200 gap-[10px]">
+                <h2 class="text-[2.3rem] font-bold">To-Do List</h2>
+                <img src="/assets/pencil.png" alt="" class="w-[45px] h-[45px]">
+            </div>
+            <!-- search and add button -->
+            <div class="input-box h-[75px]  items-end w-full justify-center flex p-2 flex-row gap-1 bg-mber-100 bg-mber-100">
+                <input class="bg-[#d5d5d5] w-[70%]  sm:w-[50%] border-0 outline-0 pl-3 rounded-bl-[10px] rounded-tl-[10px] h-[40px] dark:text-black " type="text" placeholder="Enter Something">
+                <button id="addButton" class="bg-red-900 text-[1.1rem] w-[30%] sm:w-[20%] rounded-br-[10px] h-[40px] rounded-tr-[10px] text-white cursor-pointer">Add</button>
+            </div>
+            <!-- list fomr here -->
+            <div id="listBox" class="list bg-aber-600 min-h-[10px] w-full flex items-center justify-center flex-col gap-2 pt-3 pb-3 max-h-[450px] overflow-auto">
+              
+                <!-- each task would be appended in by js -->
+            </div> 
+            <!-- last section contains list-size-counter completed-task-counter  clear-all btn to emptt list -->
+            <div id="itemCount" class="item-count w-full bg-re-400 flex flex-row flex-wrap items-center mt-1 mb-1 text-[1.2rem] font-medium justify-evenly">
+                <div id="totalItems" class="total-items m-2  sm:m-0 ">
+                    List size : 0
+                </div>
+                <div id="completedItems" class="completed-items m-2 ">
+                    Completed : 0
+                </div>
+                <button id="deleteAll" class="bg-slate-300 pt-1 pb-1 pl-3 pr-3 rounded-[5px] m-2 sm:m-0 cursor-pointer text-[1.1rem] hover:bg-slate-600 hover:text-[#f2f2f2] dark:bg-slate-500 " >
+                    Clear All
+                </button>
+            </div>
+        </main>   
+        <!-- main ends       -->
+    </div>
+    <script src="script.js" ></script>
+</body>
+</html>
